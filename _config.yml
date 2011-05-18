@@ -1,0 +1,5 @@
+pygments: true
+permalink: pretty
+
+# Delimeter to be used to seperate whole post from its preview
+content_delimeter: "<!-- -**-END PREVIEW-**- -->"
