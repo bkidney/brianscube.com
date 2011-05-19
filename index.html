@@ -1,0 +1,28 @@
+---
+layout: default
+title: Brian's Cube
+---
+
+<div id="home">
+
+	{% for post in site.posts limit:6 %}
+	
+		{% if forloop.first %}
+
+				<div id="preview-post">
+					{{ post.preview }}
+					
+					<p><a href="{{ post.url }}">Continue Reading...</a></p>
+				</div>
+
+		{% else %}
+
+  			<h2>Recent Posts</h2>
+  			<ul class="posts">
+    	
+      			<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+		  	</ul>
+    	{% endif %}
+	{% endfor %}
+
+</div>
