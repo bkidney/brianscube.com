@@ -10,6 +10,8 @@ title: Brian's Cube
 		{% if forloop.first %}
 
 				<div id="preview-post">
+					<h2>{{ post.title }}</h2>
+					
 					{{ post.preview }}
 					
 					<p><a href="{{ post.url }}">Continue Reading...</a></p>
@@ -17,7 +19,7 @@ title: Brian's Cube
 
 		{% else %}
 
-  			<h2>Recent Posts</h2>
+  			<h3>Recent Posts</h3>
   			<ul class="posts">
     	
       			<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
