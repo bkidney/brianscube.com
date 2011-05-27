@@ -1,0 +1,17 @@
+---
+layout: default
+title: Brian's Cube — Archive
+---
+
+<h2>Archive</h2>
+
+<div id="posts">
+  <ul class="posts">
+    {% for post in site.posts %}
+    <li>
+      <span>{{ post.date | date: "%d %b %Y" }} » </span>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
