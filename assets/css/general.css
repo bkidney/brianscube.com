@@ -1,4 +1,4 @@
-h1 { font-family: 'Play', arial, serif; }
+h2 { font-family: 'Play', arial, serif; }
 A:link, A:visited, A:active { text-decoration: none; border: none; }
 
 .text-right {
@@ -42,8 +42,10 @@ A:link, A:visited, A:active { text-decoration: none; border: none; }
 }
 
 .date {
-	font-size:0.9em;
     color:#8d8861;
+	border: 0px; 
+	margin-top: .1em; 
+	margin-bottom: .1em;
 }
 
 body {
@@ -55,12 +57,24 @@ body {
 }
 
 .box {
-	background: #AEA688;
+	background: #802A2A;
+	color: #cccccc;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
 }
+
+.box h3 {
+	color: #cccccc;
+}
+
 
 .highlight pre {
 	background: #eeeeee;
 	padding:1em;
 	border-width: 1px;
-	border-style: dashed;
+	border-style: solid;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
 }
