@@ -8,12 +8,13 @@
 		<li><a href="/archive">Archive</a></li>
 	</ul>
 		
-	<h3 class="caps">Categories</h3>
+	<h3 class="caps">Tags</h3>
 	<hr class="hr-tight"/>
 	<ul>
-		<li>Android</li>
-		<li>Version Control</li>
-		<li>Arduino</li>
+	{% for tag in site.iterable.tags %}
+	  <a style="font-size: {{ tag.posts | size | times:1.5 | plus: 10 }}px;" href="{{site.baseurl}}/tags/{{tag.name}}">
+	    {{ tag.name }}</a>{% if forloop.last == false %},&nbsp;{% endif %}
+	{% endfor %}
 	</ul>
 		
 <!-- End Sidebar -->

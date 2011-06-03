@@ -48,6 +48,10 @@ A:link, A:visited, A:active { text-decoration: none; border: none; }
 	margin-bottom: .1em;
 }
 
+.tags {
+	color: #8d8861;
+}
+
 body {
 	background: #443B36;
 }
