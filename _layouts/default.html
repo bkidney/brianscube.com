@@ -10,26 +10,27 @@
 </head>
 
 <body id="index">
-<div class="container showgrid">
+<div id="main">
 
 	<!-- Header -->
-	<div id="header" class="prepend-3 append-3 span-18 last">
+	<div id="header">
 		<h1 id="brianscude-header">
 			Brian's Cube
 		</h1>
 	</div>
-	<hr class="hr-tight"/>
-	<div id="subheader" class="subheader prepend-3 append-3 span-18 last">
+	<hr/>
+	<div id="subheader" class="subheader">
 		<h4 class="alt subheader-text">
 			My technical home on the web
-		</h4`>
+		</h4>
 	</div>
-	<hr class="hr-tight"/>
-	<hr/>
 	<!-- End Header -->
+
+	<hr/>
+	<hr/>
 	
 	<!-- Main Body -->
-	<div id="main-content" class="prepend-3 span-13 append-1">
+	<div id="main-content">
 		{{ content }}
 
 		{% if page.comments %}	
@@ -37,19 +38,21 @@
 		{% endif %}
 	</div>
 
-	<div id="sidebar" class="span-4 append-2 box last">
+	<div id="sidebar">
 		{% include links.html %}
 	</div>
 	<!-- End Main Body -->
 
-	<!-- Footer -->
-	<hr class="hr-tight"/>
+	<div id="footer">
+		<hr/>
 
-	<div class="prepend-3 span-9 small quiet">
-		Copyright © 2011 Brian Kidney
-	</div>
-	<div class="span-9 append-3 small quiet text-right last">
-		Site Last Updated: {{ site.time }}
+		<!-- Footer -->
+		<div id="footer-left">
+			Copyright © 2011 Brian Kidney
+		</div>
+		<div id="footer-right">
+			Site Last Updated: {{ site.time }}
+		</div>
 	</div>
 	<!-- End Footer -->
 </div>

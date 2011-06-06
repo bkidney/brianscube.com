@@ -1,5 +1,7 @@
 pygments: true
 permalink: pretty
 
+exclude: config.rb, README, todo.txt
+
 # Delimeter to be used to seperate whole post from its preview
 content_delimeter: "<!-- -**-END PREVIEW-**- -->"

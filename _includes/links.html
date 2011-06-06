@@ -1,20 +1,22 @@
-<!-- Sidebar -->
-	<h3 class="caps">Pages</h3>
-	<hr class="hr-tight"/>
-	<ul>
-		<li>About</li>
-		<li>Publications</li>
-		<li>Presentations</li>
-		<li><a href="/archive">Archive</a></li>
-	</ul>
+	<!-- Sidebar -->
+	<div class="sidebar-menu">
+		<h3>Pages</h3>
+		<hr/>
+		<ul>
+			<li>About</li>
+			<li>Publications</li>
+			<li>Presentations</li>
+			<li><a href="/archive">Archive</a></li>
+		</ul>
 		
-	<h3 class="caps">Tags</h3>
-	<hr class="hr-tight"/>
-	<ul>
-	{% for tag in site.iterable.tags %}
-	  <a style="font-size: {{ tag.posts | size | times:1.5 | plus: 10 }}px;" href="{{site.baseurl}}/tags/{{tag.name}}">
-	    {{ tag.name }}</a>{% if forloop.last == false %},&nbsp;{% endif %}
-	{% endfor %}
-	</ul>
+		<h3>Tags</h3>
+		<hr/>
+		<div class="tag-cloud">
+		{% for tag in site.iterable.tags %}
+		  <a style="font-size: {{ tag.posts | size | times:1.5 | plus: 10 }}px;" href="{{site.baseurl}}/tags/{{tag.name}}">
+		    {{ tag.name }}</a>{% if forloop.last == false %},&nbsp;{% endif %}
+		{% endfor %}
+		</div>
+	</div>
 		
-<!-- End Sidebar -->
+	<!-- End Sidebar -->
