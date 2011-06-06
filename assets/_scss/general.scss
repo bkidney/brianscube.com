@@ -1,0 +1,153 @@
+/* Colour Definitions */
+$body-background-colour: #443B36;
+$content-background-colour: #FFF8DD;
+$menu-background-colour: #802A2A;
+$code-background-colour: #eeeeee;
+
+$menu-text-colour: #cccccc;
+$date-text-colour: #8d8861;
+
+/* Measurments */
+$radius: 6px;
+
+/* Imports */
+@import "compass/css3/border-radius";
+@import "blueprint";
+@import "blueprint/grid";
+@import "blueprint/typography";
+@import "blueprint/fancy-type";
+
+/* Globals */
+body {
+	@include blueprint-typography;
+	@include fancy-type;
+}
+
+h2 { 
+	font-family: 'Play', arial, serif;
+}
+
+a {
+	&:link, &:visited, &:active { text-decoration: none; border: none; }
+}
+
+/* Convinience Deffinitions */
+@mixin box {
+	background: $menu-background-colour;
+	color: $menu-text-colour;
+	@include border-radius($radius);
+	
+	margin-top: 2em;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	
+	h3 {
+		font-variant: small-caps;
+		color: $menu-text-colour;
+		margin-bottom: .1em;
+	} 
+
+	hr {
+		margin-top: .1em; 
+		margin-bottom: .1em;
+	}
+}
+
+/* Layouts */
+#main {
+	@include container;
+	background: $content-background-colour;
+
+	#header, #subheader {
+		@include prepend(3);
+		@include column(18, true);
+		@include append(3);
+		
+		.subheader {
+			margin-top: .5em; 
+			margin-bottom: .5em;
+		}
+		
+		.subheader-text {
+			margin-top: 0; 
+			margin-bottom: 0;
+		}
+	}
+	#main-content {
+		@include prepend(3);
+		@include column(13);
+		@include append(1);
+	}
+	#sidebar {
+		@include column(5, true);
+		@include append(2);		
+
+		.sidebar-menu {
+			@include box;
+		}
+	}
+	
+	#footer {
+		@include column(24, true);
+
+		#footer-left {
+			@include prepend(3);
+			@include column(9);
+			@include quiet;
+			font-size: small;
+		}
+
+		#footer-right {
+			@include column(9, true);
+			@include append(1);
+			@include quiet;
+			text-align: right;
+			font-size: small;
+		}		
+	}
+	
+	.text {
+		font-size: 115%;
+	    padding-bottom: 1em;
+	    margin-bottom: 2em;
+	    position: relative;
+	}
+}
+
+
+/* Elements */
+
+hr+hr {
+	margin-top:-0.5em;
+}
+
+.photo {
+	padding-right: 1.5em;
+}
+
+.date {
+    color: $date-text-colour;
+	border: 0px; 
+	margin-top: .1em; 
+	margin-bottom: .1em;
+}
+
+body {
+	background: $body-background-colour;
+}
+
+.highlight {
+	pre {
+		background: $code-background-colour;
+		padding: 1em;
+		border-width: 1px;
+		border-style: solid;
+		@include border-radius($radius)
+	}
+}
+
+.tag-cloud {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
